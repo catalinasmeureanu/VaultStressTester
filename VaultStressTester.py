@@ -26,14 +26,7 @@ def delete_namespace(url, token, path):
     headers = {'X-Vault-Token' :  token}
     response=requests.delete(url +"/v1/sys/namespaces/{}".format(path), headers = headers)
     response.raise_for_status()
-    return
-    try:
-        pass
-    except:
-        logger.error("Could not find the indicated product:")
-        sys.exit(2)
-
-
+ 
 
 def main():
 
